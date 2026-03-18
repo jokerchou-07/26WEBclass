@@ -1,14 +1,6 @@
 <!DOCTYPE html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Canvas Shapes Overlap</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    canvas { border: 1px solid #ccc; background:#f9f9f9; }
-  </style>
-</head>
 <body>
-  <h1>Circle & Rectangle Overlap (Canvas)</h1>
+  
 
   <canvas id="c" width="400" height="250"></canvas>
 
@@ -16,8 +8,11 @@
     const ctx = document.getElementById('c').getContext('2d');
 
     // 畫長方形（藍）
-    ctx.fillStyle = '#4da3ff';
+    ctx.fillStyle = blue;
     ctx.fillRect(60, 60, 220, 120);
+    ctx.strokeStyle = black; 
+    ctx.lineWidth = 4;
+
 
     // 畫圓形（粉紅），與長方形重疊
     ctx.fillStyle = 'rgba(255, 122, 162, 0.95)';
@@ -25,7 +20,5 @@
     ctx.arc(230, 110, 70, 0, Math.PI * 2);
     ctx.fill();
   </script>
-
-  <p style="color:#555">說明：使用 Canvas 在同一畫布上繪製並重疊顯示。</p>
 </body>
 </html>
