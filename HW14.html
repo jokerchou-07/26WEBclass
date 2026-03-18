@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <body>
-  
 
   <canvas id="c" width="400" height="250"></canvas>
 
   <script>
     const ctx = document.getElementById('c').getContext('2d');
 
-    // 畫長方形（藍）
-    ctx.fillStyle = blue;
+    // 畫長方形（藍色）
+    ctx.fillStyle = "blue";
     ctx.fillRect(60, 60, 220, 120);
-    ctx.strokeStyle = black; 
+
+    // 長方形邊框
+    ctx.strokeStyle = "black";
     ctx.lineWidth = 4;
+    ctx.strokeRect(60, 60, 220, 120);
 
-
-    // 畫圓形（粉紅），與長方形重疊
-    ctx.fillStyle = 'rgba(255, 122, 162, 0.95)';
+    // 畫圓形（黃色），與長方形重疊
+    ctx.fillStyle = "yellow";
     ctx.beginPath();
     ctx.arc(230, 110, 70, 0, Math.PI * 2);
     ctx.fill();
   </script>
+
 </body>
 </html>
