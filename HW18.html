@@ -21,19 +21,31 @@
 
         /* 第一個標題：上方橫線 */
         .h1-style {
-            text-decoration: overline;
-            font-size: 36px;
-            margin-top: 0;
+            font-size: 48px;
+            font-weight: bold;
+            display: inline-block; /* 讓邊框長度隨文字縮放 */
+            border-top: 5px solid black; /* 使用 border 代替 overline 以增加粗細 */
+            padding-top: 5px;
+            /* 文字陰影：向右下偏移，無模糊，顏色為粉紅 */
+            text-shadow: 3px 3px 0px pink; 
+            margin-bottom: 30px;
         }
 
-        /* 第二個標題：黃色背景、斜體、立體邊框 */
+        /* 修正 Heading 2：雙層邊框（外黃內黑）+ 斜體 */
         .h2-style {
-            background-color: yellow;
+            font-size: 32px;
             font-style: italic;
-            border: 3px inset #ffd700; /* 使用 inset 營造內凹立體感 */
-            padding: 5px 10px;
-            font-size: 28px;
             font-weight: bold;
+            
+            /* 核心：結合 border 與 outline 達成雙層感 */
+            background-color: white;
+            border: 3px solid yellow;  /* 外層黃色粗邊 */
+            outline: 1px solid black; /* 內層黑色細邊 */
+            outline-offset: -5px;     /* 讓黑色線向內縮，形成間距 */
+            
+            padding: 10px 20px;
+            width: fit-content;       /* 寬度隨內容調整 */
+            min-width: 600px;         /* 模仿圖片長度 */
         }
 
         /* 第三個標題：靠右對齊、底線 */
