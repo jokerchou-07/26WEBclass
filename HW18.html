@@ -5,50 +5,44 @@
     <title>chou yi chen</title>
     <style>
         body {
-            font-family: serif; /* 使用襯線體以符合圖片外觀 */
+            font-family: serif; 
             display: flex;
-            justify-content: center;
-            padding-top: 50px;
+            padding-top: 20px;
         }
 
         .main-card {
             border: 1px solid #ccc;
             padding: 30px;
             width: 600px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* 模仿圖片的陰影 */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             background-color: white;
         }
 
-        /* 第一個標題：上方橫線 */
         .h1-style {
-            font-size: 48px;
+            font-size: 40px;
             font-weight: bold;
-            display: inline-block; /* 讓邊框長度隨文字縮放 */
-            border-top: 5px solid black; /* 使用 border 代替 overline 以增加粗細 */
+            display: inline-block;
+            border-top: 5px solid black;
             padding-top: 5px;
-            /* 文字陰影：向右下偏移，無模糊，顏色為粉紅 */
             text-shadow: 3px 3px 0px pink; 
             margin-bottom: 30px;
         }
 
-        /* 修正 Heading 2：雙層邊框（外黃內黑）+ 斜體 */
         .h2-style {
             font-size: 32px;
             font-style: italic;
             font-weight: bold;
             
-            /* 核心：結合 border 與 outline 達成雙層感 */
             background-color: white;
-            border: 3px solid yellow;  /* 外層黃色粗邊 */
-            outline: 1px solid black; /* 內層黑色細邊 */
-            outline-offset: -5px;     /* 讓黑色線向內縮，形成間距 */
+            border: 3px solid yellow;
+            outline: 1px solid black; 
+            outline-offset: -5px; 
             
             padding: 10px 20px;
-            width: fit-content;       /* 寬度隨內容調整 */
-            min-width: 600px;         /* 模仿圖片長度 */
+            width: fit-content;
+            min-width: 500px;
         }
-
-        /* 第三個標題：靠右對齊、底線 */
+        
         .h3-style {
             text-align: right;
             text-decoration: underline;
