@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>112401541</title>
+    <style>
+        /* Table styling */
+        table {
+            border-collapse: collapse;
+            margin: 30px;
+            width: 220px;
+        }
+
+        th {
+            background-color: #808080;
+            color: white;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        td {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        /* Alternating row colors */
+        .row-yellow {
+            background-color: yellow;
+        }
+
+        .row-white {
+            background-color: white;
+        }
+
+        /* Fixed div */
+        .fixed-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border: 3px solid green;
+            padding: 15px;
+            width: 220px;
+            background-color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Table with different background colors -->
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr class="row-yellow">
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr class="row-white">
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr class="row-yellow">
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <!-- Fixed position div -->
+    <div class="fixed-box">
+        This div element has<br>
+        position: fixed;
+    </div>
+
+</body>
+</html>
