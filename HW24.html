@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Image Styling Practice</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Left Image -->
+    <div class="image-box left">
+      <img src="pic.png" alt="Left Image">
+    </div>
+
+    <!-- Center Circular Image -->
+    <div class="center">
+      <img src="pic.png" alt="Center Image">
+    </div>
+
+    <!-- Right Image -->
+    <div class="image-box right">
+      <img src="pic.png" alt="Right Image">
+    </div>
+
+  </div>
+</body>
+
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    /* Left + Right image common styles */
+    .image-box {
+      width: 33%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    /* Left image (no distortion) */
+    .left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    /* Center circular image */
+    .center {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: 0 20px;
+      flex-shrink: 0;
+    }
+
+    .center img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 15px solid white;
+      box-sizing: border-box;
+    }
+
+    /* Right image (distortion allowed) */
+    .right img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 18px;
+    }
+  </style>
+</html>
