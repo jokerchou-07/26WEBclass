@@ -1,10 +1,81 @@
 <!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chou yi chen</title>
+    <style>
+        body {
+            background-color: #4da6ff; /* 藍色背景 */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-container {
+            background-color: white;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 20px; /* 增加圓角更接近圖片 */
+            box-sizing: border-box;
+        }
+
+        /* 頂部綠色區塊 */
+        .top-box {
+            background-color: #a6d947;
+            height: 180px;
+            margin-bottom: 20px;
+        }
+
+        /* 中間青色區塊容器 */
+        .mid-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .mid-box {
+            background-color: #00bcd4;
+            flex: 1; 
+            height: 180px;
+        }
+
+        /* 底部灰色區塊容器 */
+        .bottom-container {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap; 
+        }
+
+        .bottom-box {
+            background-color: #eceff1;
+            /* 寬螢幕時 4 欄 (25%) */
+            flex: 0 0 calc(25% - 7.5px); 
+            height: 100px;
+        }
+
+        /* --- 關鍵：媒體查詢 (寬度小於 480px 時) --- */
+        @media screen and (max-width: 480px) {
+            .mid-container {
+                flex-direction: column; /* 改為垂直堆疊 (a) */
+            }
+
+            .mid-box {
+                width: 100%; 
+                height: 100px; /* 小螢幕稍微縮短高度 */
+            }
+
+            .bottom-box {
+                /* 改為佔 50%，達成 2x2 */
+                flex: 0 0 calc(50% - 5px); 
+            }
+        } 
+
+    </style>
 </head>
 <body>
-
     <div class="main-container">
         <div class="top-box"></div>
 
@@ -22,71 +93,4 @@
         </div>
     </div>
 </body>
-<style>
-        body {
-            background-color: #4da6ff; /* 藍色背景 */
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .main-container {
-            background-color: white;
-            width: 100%;
-            max-width: 800px;
-            padding: 20px;
-            border-radius: 10px;
-            box-sizing: border-box;
-        }
-
-        /* 頂部綠色區塊 */
-        .top-box {
-            background-color: #a6d947;
-            height: 150px;
-            margin-bottom: 20px;
-        }
-
-        /* 中間青色區塊容器 */
-        .mid-container {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .mid-box {
-            background-color: #00bcd4;
-            flex: 1; /* 平分寬度 */
-            height: 180px;
-        }
-
-        /* 底部灰色區塊容器 */
-        .bottom-container {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap; /* 允許換行以達成 2x2 */
-        }
-
-        .bottom-box {
-            background-color: #eceff1;
-            flex: 0 0 calc(25% - 8px);
-            height: 80px;
-        }
-
-        /* --- 關鍵：媒體查詢 (寬度小於 480px 時) --- */
-        @media (max-width: 480px) {
-            .mid-container {
-                flex-direction: column; /* 垂直堆疊 */
-            }
-        
-            .mid-box {
-                width: 100%; /* 在小螢幕時寬度滿版 */
-                height: 80px; /* 確保垂直時有高度 */
-            }
-        
-            .bottom-box {
-                /* 這裡改為佔 50% 減去間距，達成 2x2 */
-                flex: 0 0 calc(50% - 5px); 
-            }
-    </style>
 </html>
