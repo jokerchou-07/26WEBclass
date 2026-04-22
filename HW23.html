@@ -84,15 +84,15 @@
         border: 1px solid #eaeaea;
     }
   
-    .image-box img {
-        max-height: 100%; /* 高度最大不超過父容器 */
-        object-fit: contain; /* 保持比例，完整顯示在框內 (多餘處會留白) */
-    }
-    
     .image-box {
         text-align: center;
         color: #0000ff;
         font-weight: bold;
+    }
+  
+    .image-box img {
+        max-height: 100%; /* 高度最大不超過父容器 */
+        object-fit: fill; /* 保持比例，完整顯示在框內 (多餘處會留白) */
     }
     
     /* 展開資訊區： */
