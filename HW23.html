@@ -4,33 +4,36 @@
 </head>
 <body>
 
-  <button class="spec-button">
-    查看清單
-  </button>
+  <div class="button-row">
+    <button class="design-button">查看清單</button>
+  </div>
 
 </body>
 <style>
     body {
-      font-family: Roboto;
-      background-color: #f5f5f5;
-      padding: 40px;
+      font-family: Roboto, Arial, sans-serif;
     }
-
-    .spec-button {
+    
+    .button-row {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .design-button {
       height: 22px;
       padding: 0 18px;
-      border: 1px solid #2f2f2f;
-      border-radius: 8px;
+    
       background-color: #ffffff;
-      color: #212121;
-
+      border: 1px solid #2f2f2f;
+      border-radius: 4px;
+    
       font-size: 13px;
       font-weight: 400;
       line-height: 22px;
-      white-space: nowrap;
-
+    
       cursor: pointer;
+      white-space: nowrap;
     }
-
+    ``
 </style>
 </html>
