@@ -39,7 +39,7 @@
     </script>
 </body>
 <style>
-   body {
+    body {
         font-family: 'Roboto', sans-serif;
         padding: 20px;
         background-color: #f9f9f9;
@@ -55,15 +55,14 @@
         color: #707070;
     }
     
-    /* 按鈕樣式：根據標註設計 */
     .info-btn {
-        height: 22px;          /* h22 */
-        padding: 0 18px;       /* 左右 padding 18 */
-        border-radius: 8px;    /* R8 */
-        border: 1px solid #2f2f2f; /* outline 1px #2f2f2f */
-        background-color: #ffffff; /* background #ffffff */
-        color: #2f2f2f;        /* Color #2f2f2f */
-        font-size: 13px;       /* Roboto Regular 13px */
+        height: 22px;
+        padding: 0 18px;
+        border-radius: 8px;
+        border: 1px solid #2f2f2f;
+        background-color: #ffffff;
+        color: #2f2f2f;
+        font-size: 13px;
         cursor: pointer;
         transition: 0.2s;
     }
@@ -75,27 +74,29 @@
     /* 圖片預覽框 */
     .preview-area {
         width: 496px;
-        height: 240px;
+        height: 240px; /* 固定高度 */
         background-color: #ffe0b2;
         display: flex;
-        padding: 0;
         justify-content: center;
         align-items: center;
         border: 1px solid #eaeaea;
+        overflow: hidden; /* 確保內容不超出邊框 */
     }
   
     .image-box {
-        text-align: center;
-        color: #0000ff;
-        font-weight: bold;
+        height: 100%; /* 讓容器撐滿父層高度 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
   
     .image-box img {
-        max-height: 100%; /* 高度最大不超過父容器 */
-        object-fit: fill; /* 保持比例，完整顯示在框內 (多餘處會留白) */
+        height: 100%;    /* 重點：強制圖片高度撐滿 */
+        width: auto;      /* 寬度自動，維持原始比例 */
+        display: block;   /* 消除圖片下方微小間隙 */
+        object-fit: contain; 
     }
     
-    /* 展開資訊區： */
     .info-details {
         display: none; 
         width: 496px;
