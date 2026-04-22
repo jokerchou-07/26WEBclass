@@ -4,37 +4,106 @@
 </head>
 <body>
 
-  <div class="button-row">
-    <button class="design-button">查看清單</button>
-  </div>
+    <div class="header-bar">
+        <span>預覽</span>
+        <button id="toggleBtn" class="info-btn">查看資訊</button>
+    </div>
 
+    <div class="preview-area">
+        <div class="image-box">
+            <img src="https://via.placeholder.com/450x240" alt="Preview">
+            <p>Default<br>450x240</p>
+        </div>
+    </div>
+
+    <div id="infoDetails" class="info-details">
+        <div class="info-row">修改日期：2017/10/12</div>
+        <div class="info-row">類別：JPG</div>
+        <div class="info-row">大小：466.97KB</div>
+        <div class="info-row">路徑：\\designcenter.qnap.com.tw\DesignCenter\PM...</div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('toggleBtn');
+        const info = document.getElementById('infoDetails');
+
+        btn.addEventListener('click', () => {
+            // 切換顯示狀態
+            if (info.style.display === 'block') {
+                info.style.display = 'none';
+                btn.textContent = '查看資訊';
+            } else {
+                info.style.display = 'block';
+                btn.textContent = '收起資訊'; // 可選：按下去後改變文字
+            }
+        });
+    </script>
 </body>
 <style>
-    body {
-      font-family: Roboto, Arial, sans-serif;
+   body {
+        font-family: 'Roboto', sans-serif;
+        padding: 20px;
+        background-color: #f9f9f9;
     }
     
-    .button-row {
-      display: flex;
-      justify-content: flex-end;
-      margin:20px;
+    .header-bar {
+        width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        font-size: 13px;
+        color: #707070;
     }
     
-    .design-button {
-      height: 22px;
-      padding: 0 18px;
-    
-      background-color: #ffffff;
-      border: 1px solid #2f2f2f;
-      border-radius: 4px;
-    
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 22px;
-    
-      cursor: pointer;
-      white-space: nowrap;
+    /* 按鈕樣式：根據標註設計 */
+    .info-btn {
+        height: 22px;          /* h22 */
+        padding: 0 18px;       /* 左右 padding 18 */
+        border-radius: 8px;    /* R8 */
+        border: 1px solid #2f2f2f; /* outline 1px #2f2f2f */
+        background-color: #ffffff; /* background #ffffff */
+        color: #2f2f2f;        /* Color #2f2f2f */
+        font-size: 13px;       /* Roboto Regular 13px */
+        cursor: pointer;
+        transition: 0.2s;
     }
-    ``
+    
+    .info-btn:hover {
+        background-color: #f0f0f0;
+    }
+    
+    /* 圖片預覽框 */
+    .preview-area {
+        width: 496px;
+        height: 240px;
+        background-color: #ffe0b2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #eaeaea;
+    }
+    
+    .image-box {
+        text-align: center;
+        color: #0000ff;
+        font-weight: bold;
+    }
+    
+    /* 展開資訊區：關鍵在於預設 display: none */
+    .info-details {
+        display: none; 
+        width: 496px;
+        margin-top: 10px;
+    }
+    
+    .info-row {
+        background-color: #e2f9e3; /* 模擬圖中的綠色底 */
+        color: #4CAF50;
+        font-size: 13px;
+        padding: 4px 10px;
+        margin-bottom: 2px;
+        border-radius: 2px;
+    }
 </style>
 </html>
