@@ -1,87 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CSS Image Styling Practice</title>
+    <title>chou yi chen</title>
 </head>
-
 <body>
-  <div class="container">
 
-    <!-- Left Image -->
-    <div class="image-box left">
-      <img src="pic.png" alt="Left Image">
+    <div class="container">
+        <img src="your-image.jpg" alt="No Distortion" class="img-left">
+
+        <img src="your-image.jpg" alt="Circular" class="img-center">
+
+        <img src="your-image.jpg" alt="Distorted" class="img-right">
     </div>
 
-    <!-- Center Circular Image -->
-    <div class="center">
-      <img src="pic.png" alt="Center Image">
-    </div>
-
-    <!-- Right Image -->
-    <div class="image-box right">
-      <img src="pic.png" alt="Right Image">
-    </div>
-
-  </div>
 </body>
-
 <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-    }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+            gap: 20px;
+        }
 
-    .container {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-between;
-      padding: 40px;
-      box-sizing: border-box;
-    }
+        img {
+            display: block;
+        }
 
-    /* Left + Right image common styles */
-    .image-box {
-      width: 33%;
-      height: 300px;
-      overflow: hidden;
-    }
+        /* 1. 左側圖片：圓角且不變形 */
+        .img-left {
+            width: 33%;
+            height: 300px;
+            border-radius: 18px;
+            object-fit: cover;
+        }
 
-    /* Left image (no distortion) */
-    .left img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 18px;
-    }
+        /* 2. 中間圖片：圓形且不變形 */
+        .img-center {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px solid
+            object-fit: cover;
+        }
 
-    /* Center circular image */
-    .center {
-      position: relative;
-      width: 150px;
-      height: 150px;
-      margin: 0 20px;
-      flex-shrink: 0;
-    }
-
-    .center img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 15px solid white;
-      box-sizing: border-box;
-    }
-
-    /* Right image (distortion allowed) */
-    .right img {
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
-      border-radius: 18px;
-    }
-  </style>
+        /* 3. 右側圖片：強制拉伸產生變形 */
+        .img-right {
+            width: 33%;
+            height: 300px;
+            object-fit: fill;
+        }
+    </style>
 </html>
