@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RWD Layout Practice</title>
-    <style>
+    <title>chou yi chen</title>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="top-box"></div>
+
+        <div class="mid-container">
+            <div class="mid-box"></div>
+            <div class="mid-box"></div>
+            <div class="mid-box"></div>
+        </div>
+
+        <div class="bottom-container">
+            <div class="bottom-box"></div>
+            <div class="bottom-box"></div>
+            <div class="bottom-box"></div>
+            <div class="bottom-box"></div>
+        </div>
+    </div>
+</body>
+<style>
         body {
             background-color: #4da6ff; /* 藍色背景 */
             margin: 0;
@@ -51,40 +69,24 @@
 
         .bottom-box {
             background-color: #eceff1;
-            flex: 1 1 calc(25% - 10px); /* 寬螢幕時佔 25% */
+            flex: 0 0 calc(25% - 8px);
             height: 80px;
         }
 
         /* --- 關鍵：媒體查詢 (寬度小於 480px 時) --- */
         @media (max-width: 480px) {
             .mid-container {
-                flex-direction: column; /* (a) 狀態：改為垂直堆疊 */
+                flex-direction: column; /* 垂直堆疊 */
             }
-
+        
+            .mid-box {
+                width: 100%; /* 在小螢幕時寬度滿版 */
+                height: 80px; /* 確保垂直時有高度 */
+            }
+        
             .bottom-box {
-                flex: 1 1 calc(50% - 10px); /* (a) 狀態：改為 2x2 佈局 */
+                /* 這裡改為佔 50% 減去間距，達成 2x2 */
+                flex: 0 0 calc(50% - 5px); 
             }
-        }
     </style>
-</head>
-<body>
-
-    <div class="main-container">
-        <div class="top-box"></div>
-
-        <div class="mid-container">
-            <div class="mid-box"></div>
-            <div class="mid-box"></div>
-            <div class="mid-box"></div>
-        </div>
-
-        <div class="bottom-container">
-            <div class="bottom-box"></div>
-            <div class="bottom-box"></div>
-            <div class="bottom-box"></div>
-            <div class="bottom-box"></div>
-        </div>
-    </div>
-
-</body>
 </html>
