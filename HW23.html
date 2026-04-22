@@ -19,7 +19,7 @@
         <div class="info-row">修改日期：2017/10/12</div>
         <div class="info-row">類別：JPG</div>
         <div class="info-row">大小：466.97KB</div>
-        <div class="info-row">路徑：\\designcenter.qnap.com.tw\DesignCenter\PM...</div>
+        <div class="info-row">路徑：\\designcenter.qnap.com.tw\DesignCenter\PM\\designcenter.qnap.com.tw\DesignCenter\PM</div>
     </div>
 
     <script>
@@ -27,7 +27,6 @@
         const info = document.getElementById('infoDetails');
 
         btn.addEventListener('click', () => {
-            // 切換顯示狀態
             if (info.style.display === 'block') {
                 info.style.display = 'none';
                 btn.textContent = '查看資訊';
@@ -80,20 +79,20 @@
         justify-content: center;
         align-items: center;
         border: 1px solid #eaeaea;
-        overflow: hidden; /* 確保內容不超出邊框 */
+        overflow: hidden;
     }
   
     .image-box {
-        height: 100%; /* 讓容器撐滿父層高度 */
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
   
     .image-box img {
-        height: 100%;    /* 重點：強制圖片高度撐滿 */
-        width: auto;      /* 寬度自動，維持原始比例 */
-        display: block;   /* 消除圖片下方微小間隙 */
+        height: 100%;
+        width: auto;
+        display: block; 
         object-fit: contain; 
     }
     
