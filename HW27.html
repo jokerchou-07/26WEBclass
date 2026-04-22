@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chou yi chen - Fixed</title>
+    <title>chou yi chen</title>
     <style>
         body {
             background-color: #4da6ff;
@@ -16,7 +14,7 @@
         .main-container {
             background-color: white;
             width: 100%;
-            max-width: 500px; /* 縮小最大寬度，更容易觀察切換 */
+            max-width: 500px;
             padding: 20px;
             border-radius: 20px;
             box-sizing: border-box;
@@ -31,7 +29,7 @@
 
         .mid-container {
             display: flex;
-            flex-direction: row; /* 寬螢幕預設橫排 */
+            flex-direction: row;
             gap: 15px;
             margin-bottom: 15px;
         }
@@ -39,8 +37,8 @@
         .mid-box {
             background-color: #00bcd4;
             flex: 1; 
-            height: 150px; /* 確保橫排時有高度 */
-            min-height: 100px; /* 強制最低高度 */
+            height: 150px;
+            min-height: 100px;
         }
 
         .bottom-container {
@@ -51,21 +49,19 @@
 
         .bottom-box {
             background-color: #eceff1;
-            /* 寬螢幕 4 欄 */
             flex: 1 1 calc(25% - 8px); 
             height: 80px;
         }
 
-        /* --- 修正後的媒體查詢 --- */
         @media screen and (max-width: 480px) {
             .mid-container {
-                flex-direction: column !important; /* 強制改為垂直堆疊 */
+                flex-direction: column !important;
             }
 
             .mid-box {
                 width: 100%;
-                height: 100px;
-                flex: none; /* 關閉彈性縮放，確保高度不被壓扁 */
+                height: 70px;
+                flex: none;
             }
 
             .bottom-box {
