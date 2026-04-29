@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+
+<p>Please input a number between 150 and 300:</p>
+
+<input type="text" id="numberInput">
+<button onclick="checkValue()">Submit</button>
+
+<p id="message"></p>
+
+<script>
+function checkValue() {
+  var value = document.getElementById("numberInput").value;
+  var message = document.getElementById("message");
+
+  if (value < 150) {
+    message.innerHTML = "Value too small";
+  } else if (value > 300) {
+    message.innerHTML = "Value too large";
+  } else {
+    message.innerHTML = "Input OK";
+  }
+}
+</script>
+
+</body>
+</html>
