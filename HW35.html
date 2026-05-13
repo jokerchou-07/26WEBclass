@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Object Properties Demo</title>
+  <title>Profile Properties</title>
 </head>
 <body>
 
-<h2>Object Properties Before Deletion:</h2>
-<p id="before"></p>
+<h2>Before Deleting Age:</h2>
+<div id="before"></div>
 
-<h2>Object Properties After Deletion:</h2>
-<p id="after"></p>
+<h2>After Deleting Age:</h2>
+<div id="after"></div>
 
 <script>
-  // Create object
-  let person = {
-    name: "John",
-    age: 25,
-    city: "New York"
+  // Given object
+  var Person = {
+    firstName: "Tony",
+    lastName: "Lee",
+    age: 50,
+    eyeColor: "Blue"
   };
 
-  // List properties before deletion
-  let beforeText = "";
-  for (let key in person) {
-    beforeText += key + ": " + person[key] + "<br>";
+  // Display properties before deletion
+  let beforeOutput = "";
+  for (let key in Person) {
+    beforeOutput += key + ": " + Person[key] + "<br>";
   }
-  document.getElementById("before").innerHTML = beforeText;
+  document.getElementById("before").innerHTML = beforeOutput;
 
   // Delete age property
-  delete person.age;
+  delete Person.age;
 
-  // List properties after deletion
-  let afterText = "";
-  for (let key in person) {
-    afterText += key + ": " + person[key] + "<br>";
+  // Display properties after deletion
+  let afterOutput = "";
+  for (let key in Person) {
+    afterOutput += key + ": " + Person[key] + "<br>";
   }
-  document.getElementById("after").innerHTML = afterText;
+  document.getElementById("after").innerHTML = afterOutput;
 </script>
 
 </body>
