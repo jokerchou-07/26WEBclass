@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Profile Properties</title>
+  <title>chou yi chen</title>
 </head>
 <body>
 
@@ -12,7 +12,6 @@
 <div id="after"></div>
 
 <script>
-  // Given object
   var Person = {
     firstName: "Tony",
     lastName: "Lee",
@@ -20,17 +19,13 @@
     eyeColor: "Blue"
   };
 
-  // Display properties before deletion
   let beforeOutput = "";
   for (let key in Person) {
     beforeOutput += key + ": " + Person[key] + "<br>";
   }
   document.getElementById("before").innerHTML = beforeOutput;
 
-  // Delete age property
   delete Person.age;
-
-  // Display properties after deletion
   let afterOutput = "";
   for (let key in Person) {
     afterOutput += key + ": " + Person[key] + "<br>";
